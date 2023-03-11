@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass';
+}
+body{
+    height: min-content;
+}
+:root{
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    --Orange: hsl(25, 97%, 53%);
+    --GreyTransparent: hsla(216, 12%, 54%, 5%);
+}
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--VeryDarkBlue);
+}
+.container{
+    padding: 30px;
+    height: 403.188px;
+    width: 391.833px;
+    background: radial-gradient(circle at top,#252d37,#151d27 100%);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+.container__circle{
+    display: grid;
+    justify-content: center;
+    background: var(--GreyTransparent);
+    height: min-content;
+    width: min-content;
+    padding: 15px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-bottom: 30px;
+}
+.title{
+    color: var(--White);
+    font-size: 25px;
+    margin: 10px 0;
+
+}
+.paragraph{
+    font-size: 15px;
+    color: var(--LightGrey);
+    margin: 10px 0;
+    line-height: 1.5;
+}
+.buttons-grid{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.btn{
+    font-size: 16px;
+    display: grid;
+    justify-content: center;
+    background: hsla(217, 12%, 63%, 10%);
+    color: var(--MediumGrey);
+    height: 45px;
+    width: 45px;
+    padding: 15px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 20px 0 30px 0;
+}
+#btn-submit{
+    width: 100%;
+    background: var(--Orange);
+    border: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: var(--White);
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+.btn:hover{
+    background: var(--Orange);
+    color: var(--White);
+    cursor: pointer;
+}
+.btn:focus{
+    background: var(--LightGrey);
+    color: var(--White);
+}
+#btn-submit:hover{
+    background: var(--White);
+    color: var(--Orange);
+    cursor: pointer;
+}
+
+/*?Container 2*/
+
+.container-2{
+    display: none;
+    padding: 40px 25px 40px 25px;
+    height: 403.188px;
+    width: 391.833px;
+    background: radial-gradient(circle at top,#252d37ef,#151d27 100%);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    text-align: center;
+}
+.img{
+    display: block;
+    margin: auto;
+}
+.selected-text{
+    display: inline-block;
+    background: var(--GreyTransparent);
+    color: var(--Orange);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    font-size: 15px;
+    padding: 10px;
+    margin: 30px 0;
+    font-weight: 400;
+}
+.gratitude-title{
+    color: var(--White);
+}
+.gratitude-paragraph{
+    font-size: 15px;
+    margin-top: 15px;
+    line-height: 1.5;
+    color: var(--LightGrey);
+}
+#err{
+    position: absolute;
+    bottom: 50px;
+    color: rgb(218, 38, 38);
+    font-size: 1.2em;
+}
+
+/*!Media*/
+
+@media screen and (max-width: 420px){
+    .background{
+        padding: 20px;
+    }
+    .container{
+        width: 100%;
+    }
+    .paragraph{
+        margin-bottom: 0;
+    }
+    .container-2{
+        width: 100%;
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .background{
+        padding: 20px;
+    }
+    .container__circle{
+        margin: 10px 0 0 10px;
+    }
+    .title{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .paragraph{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .container{
+        height: 440px;
+        padding: 20px;
+    }
+    .container-2{
+        height: 440px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) and (height: 486px){
+    #err{
+        bottom: 0;
+    }
+} 
